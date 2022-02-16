@@ -13,4 +13,4 @@ def bs(stt, end):
             end = mid - 1
     return result
 
-print(bs(min(lst), max(lst)))
+print(bs(0, max(lst)))
