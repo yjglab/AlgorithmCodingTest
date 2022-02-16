@@ -3,7 +3,8 @@ n = int(sys.stdin.readline().rstrip())
 items = list(map(int, sys.stdin.readline().rstrip().split()))
 m = int(sys.stdin.readline().rstrip())
 needs = list(map(int, sys.stdin.readline().rstrip().split()))
-
+items.sort()
+needs.sort()
 def bs(stt, end, target):
     while stt <= end:
         mid = (stt + end) // 2
