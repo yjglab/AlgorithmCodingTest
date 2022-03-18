@@ -1,6 +1,6 @@
 arr = list(map(int, input()))
 
-def solution(result, arr):
+def solution(arr):
     if len(arr) == 1:
         return arr[0]
     result = max(arr[0] + arr[1], arr[0] * arr[1])
@@ -10,4 +10,4 @@ def solution(result, arr):
         else:
             result += arr[i]
     return result
-print(solution(result, arr))
+print(solution(arr))
