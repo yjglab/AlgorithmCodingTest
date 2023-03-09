@@ -12,7 +12,6 @@ function solution(board, moves) {
     for (let i = 1; i < stk.length; i += 1) {
       if (stk[i] === stk[i - 1]) {
         stk.splice(i - 1, 2);
-        i -= 2;
         result += 2;
       }
     }
