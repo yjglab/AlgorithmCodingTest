@@ -9,15 +9,13 @@ function solution(n, stations, w) {
         now = stations[s++] + w + 1;
         continue;
       }
-      if (now + w < front - w) now += w;
-      now += w + 1;
     } else {
       if (now + w > n) {
         result += 1;
         break;
       }
-      now += w * 2 + 1;
     }
+    now += w * 2 + 1;
     result += 1;
   }
   return result;
