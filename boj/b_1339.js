@@ -11,6 +11,7 @@ function solution(n, str) {
     if (!cands[i]) break;
     cands[i] *= num--;
   }
+  console.log(cands);
   return cands.reduce((accr, curr) => accr + curr, 0);
 }
 solution(2, ["GCF", "ACDEB"]);
