@@ -1,5 +1,5 @@
-function solution(a, b) {
-  const d = Array.from({ length: a.length + 1 }, () =>
+function solution(a: string, b: string) {
+  const d: number[][] = Array.from({ length: a.length + 1 }, () =>
     Array(b.length + 1).fill(0)
   );
   for (let i = 0; i < a.length; i += 1) {
