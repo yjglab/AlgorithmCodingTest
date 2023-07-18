@@ -1,4 +1,4 @@
-function solution(a: string, b: string) {
+function sol9251(a: string, b: string) {
   const d: number[][] = Array.from({ length: a.length + 1 }, () =>
     Array(b.length + 1).fill(0)
   );
@@ -10,4 +10,4 @@ function solution(a: string, b: string) {
   }
   console.log(d[a.length][b.length]);
 }
-solution("ACAYKP", "CAPCAK");
+sol9251("ACAYKP", "CAPCAK");
