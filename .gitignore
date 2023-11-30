@@ -8,3 +8,4 @@ boj_compiler_py
 .eslintignore
 tsconfig.json
 .DS_Store
+euler
