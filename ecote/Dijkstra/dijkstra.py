@@ -1,3 +1,6 @@
+import heapq
+hq = []
+n = 6
 graph = [[],
          [(2, 2), (5, 3), (1, 4)],
          [(3, 3), (2, 4)],
@@ -5,23 +8,18 @@ graph = [[],
          [(3, 3), (1, 5)],
          [(1, 3), (2, 6)],
          []]
+dist = [1e9] * (n + 1)
 
-import heapq
-q = []
-n = 6
-INF = int(1e9)
-path = [INF] * (n + 1)
-
-def dijkstra(start):
-    heapq.heappush(q, (0, start))
-    path[start] = 0
-    while q:
-        cost, poped = heapq.heappop(q)
-        if cost > path[poped]:
+def dijkstra(s):
+    heapq.heappush(hq, (0, s))
+    dist[s] = 0
+    while hq:
+        cost, now = heapq.heappop(hq)
+        if cost > dist[now]:
             continue
-        for c, node in graph[poped]:
-            if path[node] > cost + c:
-                path[node] = cost + c
-                heapq.heappush(q, (cost + c, node))
+        for p, v in graph[now]:
+            if dist[v] > cost + p:
+                dist[v] = cost + p
+                heapq.heappush(hq, (cost + p, v))
 dijkstra(1)
-print(path)
+print(dist)
